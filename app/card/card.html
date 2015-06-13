@@ -1,0 +1,52 @@
+<h2>{{person.name}}</h2>
+
+<section id="greatAt">
+	<h3>Great at:</h3>
+	<p ng-if="person.course == 'gd'">
+		[ {{person.greatAtEditorial}} ] Editorial design<br />
+		[ {{person.greatAtDigital}} ] Digital design<br />
+		[ {{person.greatAtBranding}} ] Branding<br />
+		[ {{person.greatAtPhotography}} ] Photography
+	</p>
+	<p ng-if="person.course == 'i'">
+		[ {{person.greatAtAnimation}} ] Animation<br />
+		[ {{person.greatAtDigital}} ] Digital Illustration<br />
+		[ {{person.greatAtPrint}} ] Print Illustration<br />
+		[ {{person.greatAt3D}} ] 3D Design
+	</p>
+</section>
+
+<section id="speciality">
+	<h3>Speciality:</h3>
+	<p>{{person.speciality}}</p>
+</section>
+
+<section id="description">
+	<h3>Description:</h3>
+	<p ng-if="person.course == 'gd'">
+		[ {{person.descriptionFormFunction}} ] Form follows function<br />
+		[ {{person.descriptionGoodDesign}} ] Good design communicates<br />
+		[ {{person.descriptionDetails}} ] God is in the details<br />
+		[ {{person.descriptionBreakRules}} ] Break the rules<br />
+		[ {{person.descriptionMinimalismDead}} ] Minimalism is dead<br />
+		[ {{person.descriptionLessIsMore}} ] Less is more
+	</p>
+	<p ng-if="person.course == 'i'">
+		[ {{person.descriptionPictureWords}} ] A picture is worth a thousand words<br />
+		[ {{person.descriptionGoodIllustration}} ] Good illustration communicates<br />
+		[ {{person.descriptionImagination}} ] Imagination is the beginning of creation<br />
+		[ {{person.descriptionStyle}} ] Style is not to be trusted<br />
+		[ {{person.descriptionBreakRules}} ] Break the rules<br />
+		[ {{person.descriptionSimple}} ] Keep it simple
+	</p>
+</section>
+
+<section  id="website" ng-if="person.website">
+	<h3>Website:</h3>
+	<p>{{person.website}}</p>
+</section>
+
+<section  id="email" ng-if="person.email">
+	<h3>Email:</h3>
+	<p>{{person.email}}</p>
+</section>

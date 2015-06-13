@@ -1,12 +1,15 @@
-'use strict';
-
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+angular.module('keepsake', [
+	'ngRoute',
+	'keepsake.index',
+	'keepsake.card',
 ]).
+
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+	$routeProvider.when('/', {
+		templateUrl: 'index/index.html',
+		controller: 'IndexController'
+	}).when('/card/:name/', {
+		templateUrl: 'card/card.html',
+		controller: 'CardController'
+	}).otherwise({redirectTo: '/'});
 }]);
