@@ -7,11 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bower_components/html5-boilerplate/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/html5-boilerplate/css/main.css">
+	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/less/styles.css" />
 	<script type="text/javascript" src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-	<div ng-view></div>
+	<div class="container">
+		<div class="col-md-8 col-md-offset-2">
+			<div ng-view></div>
+		</div>
+	</div>
 
 	<!-- In production use:
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

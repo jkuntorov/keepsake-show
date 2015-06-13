@@ -8,7 +8,7 @@ config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: 'index/index.html',
 		controller: 'IndexController'
-	}).when('/card/:name/', {
+	}).when('/card/:id/', {
 		templateUrl: 'card/card.html',
 		controller: 'CardController'
 	}).otherwise({redirectTo: '/'});
