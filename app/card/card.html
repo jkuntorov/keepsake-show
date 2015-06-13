@@ -3,7 +3,7 @@
 
 	<div class="row">
 		<div class="col-md-8 image">
-
+			<img class="img-responsive" ng-src="assets/images/work/{{person.id}}.jpg" alt="{{person.name}}" />
 		</div>
 		
 		<div class="col-md-4 info">
@@ -50,7 +50,7 @@
 
 			<section  id="website" ng-if="person.website">
 				<h3>Website:</h3>
-				<p>{{person.website}}</p>
+				<p><a href="http://{{person.website}}/">{{person.website}}</a></p>
 			</section>
 
 			<section  id="email" ng-if="person.email">

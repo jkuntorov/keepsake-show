@@ -2,16 +2,32 @@ body {
 	font-family: 'Inconsolata', monospace;
 }
 
+h3 {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+
+
+a {
+	color: #fff;
+	background: #000;
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px solid transparent;
+
+	&:hover {
+		background: transparent;
+		color: #000;
+		border-color: #000;
+		text-decoration: none;
+	}
+}
+
 .card {
 	section {
 		margin-bottom: 20px;
-
-		h3 {
-			font-size: 13px;
-			text-transform: uppercase;
-			font-weight: bold;
-			margin: 0 0 5px 0;
-		}
 
 		.option {
 			display: block;
