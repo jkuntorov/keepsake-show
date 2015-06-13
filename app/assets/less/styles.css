@@ -20,6 +20,17 @@ a:hover {
   border-color: #000;
   text-decoration: none;
 }
+#names-index ul {
+  padding-left: 0;
+  list-style: none;
+}
+#names-index ul li {
+  display: inline-block;
+  margin: 3px 5px 3px 0;
+}
+#names-index ul li a {
+  font-size: 16px;
+}
 .card section {
   margin-bottom: 20px;
 }
