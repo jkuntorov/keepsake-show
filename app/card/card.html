@@ -1,60 +1,72 @@
 <div class="card">
-	<h2>{{person.name}}</h2>
 
 	<div class="row">
-		<div class="col-md-8 image">
+		
+		<div class="col-md-9 image">
 			<img class="img-responsive" ng-src="assets/images/work/{{person.id}}.jpg" alt="{{person.name}}" />
 		</div>
+
 		
-		<div class="col-md-4 info">
-			<section id="greatAt">
-				<h3>Great at:</h3>
-				<p ng-if="person.course == 'gd'">
-					<span class="option"><span class="checkmark">[{{person.greatAtEditorial&& 'x' || ' '}}]</span> <span class="title">Editorial design</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAtDigital&& 'x' || ' '}}]</span> <span class="title">Digital design</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAtBranding&& 'x' || ' '}}]</span> <span class="title">Branding</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAtPhotography&& 'x' || ' '}}]</span> <span class="title">Photography</span></span>
-				</p>
-				<p ng-if="person.course == 'i'">
-					<span class="option"><span class="checkmark">[{{person.greatAtAnimation&& 'x' || ' '}}]</span> <span class="title">Animation</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAtDigital&& 'x' || ' '}}]</span> <span class="title">Digital Illustration</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAtPrint&& 'x' || ' '}}]</span> <span class="title">Print Illustration</span></span>
-					<span class="option"><span class="checkmark">[{{person.greatAt3D&& 'x' || ' '}}]</span> <span class="title">3D Design</span></span>
-				</p>
+		<div class="col-md-3 info">
+			<section>
+				<h3>My name is:</h3>
+				<h2>{{person.name}}</h2>
+			</section>
+
+			<section>
+				<h3>I'm a<span ng-if="person.course == 'i'">n</span>:</h3>
+				<h2 ng-if="person.course == 'gd'">Graphic Designer</h2>
+				<h2 ng-if="person.course == 'i'">Illustrator</h2>
 			</section>
 
 			<section id="speciality">
-				<h3>Speciality:</h3>
+				<h3>I specialise in:</h3>
 				<p>{{person.speciality}}</p>
 			</section>
 
-			<section id="description">
-				<h3>Description:</h3>
+			<section id="greatAt">
+				<h3>I'm really great at:</h3>
 				<p ng-if="person.course == 'gd'">
-					<span class="option"><span class="checkmark">[{{person.descriptionFormFunction && 'x' || ' '}}]</span> <span class="title">Form follows function</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionGoodDesign && 'x' || ' '}}]</span> <span class="title">Good design communicates</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionDetails && 'x' || ' '}}]</span> <span class="title">God is in the details</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionBreakRules && 'x' || ' '}}]</span> <span class="title">Break the rules</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionMinimalismDead && 'x' || ' '}}]</span> <span class="title">Minimalism is dead</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionLessIsMore && 'x' || ' '}}]</span> <span class="title">Less is more</span></span>
+					<span ng-if="{person.speciality != 'Editorial design'}" class="option"><span class="checkmark">({{person.greatAtEditorial&& 'x' || ' '}})</span> <span class="title">Editorial design</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtDigital&& 'x' || ' '}})</span> <span class="title">Digital design</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtBranding&& 'x' || ' '}})</span> <span class="title">Branding</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtPhotography&& 'x' || ' '}})</span> <span class="title">Photography</span></span>
 				</p>
 				<p ng-if="person.course == 'i'">
-					<span class="option"><span class="checkmark">[{{person.descriptionPictureWords && 'x' || ' '}}]</span> <span class="title">A picture is worth a thousand words</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionGoodIllustration && 'x' || ' '}}]</span> <span class="title">Good illustration communicates</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionImagination && 'x' || ' '}}]</span> <span class="title">Imagination is the beginning of creation</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionStyle && 'x' || ' '}}]</span> <span class="title">Style is not to be trusted</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionBreakRules && 'x' || ' '}}]</span> <span class="title">Break the rules</span></span>
-					<span class="option"><span class="checkmark">[{{person.descriptionSimple && 'x' || ' '}}]</span> <span class="title">Keep it simple</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtAnimation&& 'x' || ' '}})</span> <span class="title">Animation</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtDigital&& 'x' || ' '}})</span> <span class="title">Digital Illustration</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAtPrint&& 'x' || ' '}})</span> <span class="title">Print Illustration</span></span>
+					<span class="option"><span class="checkmark">({{person.greatAt3D&& 'x' || ' '}})</span> <span class="title">3D Design</span></span>
+				</p>
+			</section>
+
+			<section id="description">
+				<h3>I would describe my work as:</h3>
+				<p ng-if="person.course == 'gd'">
+					<span class="option"><span class="checkmark">({{person.descriptionFormFunction && 'x' || ' '}})</span> <span class="title">Form follows function</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionGoodDesign && 'x' || ' '}})</span> <span class="title">Good design communicates</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionDetails && 'x' || ' '}})</span> <span class="title">God is in the details</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionBreakRules && 'x' || ' '}})</span> <span class="title">Break the rules</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionMinimalismDead && 'x' || ' '}})</span> <span class="title">Minimalism is dead</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionLessIsMore && 'x' || ' '}})</span> <span class="title">Less is more</span></span>
+				</p>
+				<p ng-if="person.course == 'i'">
+					<span class="option"><span class="checkmark">({{person.descriptionPictureWords && 'x' || ' '}})</span> <span class="title">A picture is worth a thousand words</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionGoodIllustration && 'x' || ' '}})</span> <span class="title">Good illustration communicates</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionImagination && 'x' || ' '}})</span> <span class="title">Imagination &mdash; the beginning of creation</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionStyle && 'x' || ' '}})</span> <span class="title">Style is not to be trusted</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionBreakRules && 'x' || ' '}})</span> <span class="title">Break the rules</span></span>
+					<span class="option"><span class="checkmark">({{person.descriptionSimple && 'x' || ' '}})</span> <span class="title">Keep it simple</span></span>
 				</p>
 			</section>
 
 			<section  id="website" ng-if="person.website">
-				<h3>Website:</h3>
+				<h3>You can view my work at:</h3>
 				<p><a href="http://{{person.website}}/">{{person.website}}</a></p>
 			</section>
 
 			<section  id="email" ng-if="person.email">
-				<h3>Email:</h3>
+				<h3>You can contact me on:</h3>
 				<p>{{person.email}}</p>
 			</section>
 		</div>

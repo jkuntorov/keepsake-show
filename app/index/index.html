@@ -1,8 +1,10 @@
 <section id="names-index">
-	<h3>Names Index</h3>
 	<ul>
 		<li ng-repeat="person in people">
-			<a href="#/card/{{person.id}}">{{person.name}}</a>
+			<a href="#/card/{{person.id}}">
+				<div class="smallpic" style="background-image: url(assets/images/work/{{person.id}}.jpg);"></div>
+				<h4>{{person.name}}</h4>
+			</a>
 		</li>
 	</ul>
 </section>
