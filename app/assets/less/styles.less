@@ -1,23 +1,47 @@
 body {
 	font-family: 'Inconsolata', monospace;
+	padding-top: 20px;
 }
 
 #logo {
 	height: 25px;
 	margin: 15px 0 0;
-	position: fixed;
+	// position: fixed;
 	top: 8px;
 }
 
-#names-index {
+#filters {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	line-height: 22px;
+
+	select {
+		&.form-control {
+			height: 22px;
+			box-shadow: none;
+
+			&:focus {
+				border-color: #000;
+				background: #000;
+				color: #fff;
+			}
+		}
+	}
+
+	a {
+		color: #000;
+		cursor: pointer;
+	}
+}
+
+#participants {
 	ul {
 		padding-left: 0;
 		list-style: none;
 
 		li {
-			display: inline-block;
-			margin: 7.5px 10px 7.5px 0px;
-			width: 19%;
+			padding-bottom: 15px;
 
 			a {
 				transition: all 0.1s;
@@ -28,13 +52,14 @@ body {
 				border-bottom: 1px solid transparent;
 				
 				h4 {
-					margin: 3px 0 0 0;
+					margin: 6px 0 3px;
 					font-size: 18px;
+					white-space: nowrap;
 				}
 
-				.smallpic {
+				.image {
 					transition: all 0.5s;
-					height: 30px;
+					height: 35px;
 					width: 100%;
 					background-size: 107%;
 					background-position: center;
@@ -43,13 +68,14 @@ body {
 					filter: grayscale(100%);
 				}
 
-				&:hover {
+				&:hover, &:focus, &.hover, &.focus {
+					outline: none;
 					transition: all 0.1s;
 					text-decoration: none;
 					background: #000;
 					color: #fff;
 
-					.smallpic {
+					.image {
 						transition: all 0.5s;
 						-webkit-filter: grayscale(0%);
 						filter: grayscale(0%);
@@ -61,7 +87,6 @@ body {
 }
 
 .card {
-	padding-top: 20px;
 	h2 {
 		margin-top: 0;
 		font-size: 14px;
@@ -107,5 +132,29 @@ body {
 				margin-left: 25px;
 			}
 		}
+	}
+}
+
+.animate-view {
+	&.ng-enter, 
+	&.ng-leave
+	{
+		transition: 150ms ease-in all;
+		position: relative;
+		display: block;
+	} 
+	 
+	&.ng-enter.ng-enter-active, 
+	&.ng-leave {
+		opacity: 1;
+		bottom: 0;
+		height: auto;
+	}
+
+	&.ng-leave.ng-leave-active,
+	&.ng-enter {
+		opacity: 0;
+		bottom: -50px;
+		height: 0px;
 	}
 }

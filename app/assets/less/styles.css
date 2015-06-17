@@ -1,22 +1,39 @@
 body {
   font-family: 'Inconsolata', monospace;
+  padding-top: 20px;
 }
 #logo {
   height: 25px;
   margin: 15px 0 0;
-  position: fixed;
   top: 8px;
 }
-#names-index ul {
+#filters {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  line-height: 22px;
+}
+#filters select.form-control {
+  height: 22px;
+  box-shadow: none;
+}
+#filters select.form-control:focus {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+#filters a {
+  color: #000;
+  cursor: pointer;
+}
+#participants ul {
   padding-left: 0;
   list-style: none;
 }
-#names-index ul li {
-  display: inline-block;
-  margin: 7.5px 10px 7.5px 0px;
-  width: 19%;
+#participants ul li {
+  padding-bottom: 15px;
 }
-#names-index ul li a {
+#participants ul li a {
   transition: all 0.1s;
   padding: 5px 5px 2px 5px;
   font-size: 16px;
@@ -24,13 +41,14 @@ body {
   color: #000;
   border-bottom: 1px solid transparent;
 }
-#names-index ul li a h4 {
-  margin: 3px 0 0 0;
+#participants ul li a h4 {
+  margin: 6px 0 3px;
   font-size: 18px;
+  white-space: nowrap;
 }
-#names-index ul li a .smallpic {
+#participants ul li a .image {
   transition: all 0.5s;
-  height: 30px;
+  height: 35px;
   width: 100%;
   background-size: 107%;
   background-position: center;
@@ -38,19 +56,23 @@ body {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-#names-index ul li a:hover {
+#participants ul li a:hover,
+#participants ul li a:focus,
+#participants ul li a.hover,
+#participants ul li a.focus {
+  outline: none;
   transition: all 0.1s;
   text-decoration: none;
   background: #000;
   color: #fff;
 }
-#names-index ul li a:hover .smallpic {
+#participants ul li a:hover .image,
+#participants ul li a:focus .image,
+#participants ul li a.hover .image,
+#participants ul li a.focus .image {
   transition: all 0.5s;
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
-}
-.card {
-  padding-top: 20px;
 }
 .card h2 {
   margin-top: 0;
@@ -89,4 +111,22 @@ body {
 .card section .option .title {
   display: block;
   margin-left: 25px;
+}
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+  transition: 150ms ease-in all;
+  position: relative;
+  display: block;
+}
+.animate-view.ng-enter.ng-enter-active,
+.animate-view.ng-leave {
+  opacity: 1;
+  bottom: 0;
+  height: auto;
+}
+.animate-view.ng-leave.ng-leave-active,
+.animate-view.ng-enter {
+  opacity: 0;
+  bottom: -50px;
+  height: 0px;
 }

@@ -1,6 +1,6 @@
 angular.module('keepsake', [
 	'ngRoute',
-	'wu.masonry',
+	'ngAnimate',
 	'keepsake.index',
 	'keepsake.card',
 ]).

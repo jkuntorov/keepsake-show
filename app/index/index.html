@@ -1,10 +1,43 @@
-<section id="names-index">
-	<ul>
-		<li ng-repeat="person in people">
-			<a href="#/card/{{person.id}}">
-				<div class="smallpic" style="background-image: url(assets/images/work/{{person.id}}.jpg);"></div>
-				<h4>{{person.name}}</h4>
-			</a>
-		</li>
-	</ul>
+<section id="filters">
+	<div class="row">
+		<div class="field-group col-sm-1">
+			<strong>Filter</strong>
+		</div>
+		<div class="field-group col-md-2 col-xs-6">
+			<select id="course" ng-model="search.course" class="form-control">
+				<option value="">All courses</option>
+				<option value="gd">Graphic Design</option>
+				<option value="i">Illustration</option>
+			</select>
+		</div>
+		<div class="field-group col-md-2 col-xs-6" ng-if="search.course">
+			<select id="speciality" ng-model="search.speciality" class="form-control">
+				<option value="">All specialities</option>
+				<option ng-if="search.course == 'gd'" value="branding">Branding</option>
+				<option ng-if="search.course == 'gd'" value="digital">Digital Design</option>
+				<option ng-if="search.course == 'gd'" value="editorial">Editorial Design</option>
+				<option ng-if="search.course == 'gd'" value="photography">Photography</option>
+
+				<option ng-if="search.course == 'i'" value="3d">3D Design</option>
+				<option ng-if="search.course == 'i'" value="animation">Animation</option>
+				<option ng-if="search.course == 'i'" value="digital">Digital Illustration</option>
+				<option ng-if="search.course == 'i'" value="print">Print Illustration</option>
+			</select>
+		</div>
+		<div class="field-group col-sm-1" ng-if="search.course">
+			<a ng-click="clearFilters()">Clear</a>
+		</div>
+	</div>
+</section>
+<section id="participants">
+	<div class="row">
+		<ul>
+			<li class="col-md-3 col-sm-4 col-xs-12" ng-repeat="person in people | filter:search">
+				<a href="#/card/{{person.id}}">
+					<div class="image" style="background-image: url(assets/images/work/{{person.id}}.jpg);"></div>
+					<h4>{{person.name}}</h4>
+				</a>
+			</li>
+		</ul>
+	</div>
 </section>
