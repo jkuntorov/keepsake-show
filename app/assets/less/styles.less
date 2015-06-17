@@ -1,13 +1,45 @@
-body {
-	font-family: 'Inconsolata', monospace;
-	padding-top: 20px;
+html, body {
+	height: 100%;
 }
 
-#logo {
-	height: 25px;
-	margin: 15px 0 0;
-	// position: fixed;
-	top: 8px;
+body {
+	font-family: 'Inconsolata', monospace;
+	padding: 20px;
+}
+
+.logo {
+	max-height: 25px;
+	max-width: 100%;
+	width: auto;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+a {
+	color: #000;
+	font-weight: bold;
+
+	&:hover {
+		color: #000;
+	}
+}
+
+a.cta {
+	color: #fff;
+	background: #000;
+	padding: 3px;
+	border-radius: 2px;
+	border: 1px solid transparent;
+	transition: all 0.1s;
+	font-weight: normal;
+
+	&:hover {
+		background: transparent;
+		color: #000;
+		border-bottom-color: #000;
+		text-decoration: none;
+		transition: all 0.1s;
+	}
 }
 
 #filters {
@@ -87,33 +119,20 @@ body {
 }
 
 .card {
+	img {
+		margin-bottom: 20px;
+		margin-left: auto;
+	}
+
 	h2 {
 		margin-top: 0;
 		font-size: 14px;
 	}
 
-
 	h3 {
 		font-size: 14px;
 		font-weight: bold;
 		margin: 0 0 5px 0;
-	}
-
-	a {
-		color: #fff;
-		background: #000;
-		padding: 3px;
-		border-radius: 2px;
-		border: 1px solid transparent;
-		transition: all 0.1s;
-
-		&:hover {
-			background: transparent;
-			color: #000;
-			border-bottom-color: #000;
-			text-decoration: none;
-			transition: all 0.1s;
-		}
 	}
 
 	section {
@@ -157,4 +176,49 @@ body {
 		bottom: -50px;
 		height: 0px;
 	}
+}
+
+footer {
+	margin-top: 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	border-top: 1px solid #ccc;
+
+	.sponsors {
+		p {
+			margin: 0;
+		}
+
+		#toad {
+			height: 25px;
+		}
+
+		#mbc {
+			height: 95px;
+			margin-top: -55px;
+		}
+	}
+
+	.description {
+		p:last-child {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.row {
+	&.no-gutter {
+		margin-left: -5px;
+		margin-right: -5px;
+			
+		> [class*='col-']:not(:first-child),
+		> [class*='col-']:not(:last-child) {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+}
+
+.nowrap {
+	white-space: nowrap;
 }

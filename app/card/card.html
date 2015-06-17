@@ -2,58 +2,64 @@
 
 	<div class="row">
 		
-		<div class="col-md-9 image">
+		<div class="col-lg-9 image">
 			<img class="img-responsive" ng-src="assets/images/work/{{person.id}}.jpg" alt="{{person.name}}" />
 		</div>
 
 		
-		<div class="col-md-3 info">
-			<section>
-				<h3>My name is:</h3>
-				<h2>{{person.name}}</h2>
-			</section>
+		<div class="col-lg-3 info">
+			<div class="row">
+				<div class="col-lg-12 col-lg-offset-0 col-md-4 col-md-offset-4 col-xs-12">
+					<section>
+						<h3>My name is:</h3>
+						<h2>{{person.name}}</h2>
+					</section>
 
-			<section>
-				<h3>I'm a<span ng-if="person.course == 'i'">n</span>:</h3>
-				<h2 ng-if="person.course == 'gd'">Graphic Designer</h2>
-				<h2 ng-if="person.course == 'i'">Illustrator</h2>
-			</section>
+					<section>
+						<h3>I'm a<span ng-if="person.course == 'i'">n</span>:</h3>
+						<h2 ng-if="person.course == 'gd'">Graphic Designer</h2>
+						<h2 ng-if="person.course == 'i'">Illustrator</h2>
+					</section>
 
-			<section id="speciality">
-				<h3>I specialise in:</h3>
-				<p>{{person.speciality}}</p>
-			</section>
+					<section id="speciality">
+						<h3>I specialise in:</h3>
+						<p>{{person.speciality}}</p>
+					</section>
 
-			<section id="greatAt">
-				<h3>I'm really great at:</h3>
-				<p>
-					<span class="option" ng-repeat="option in greatAt">
-						<span class="checkmark">({{option.checkmark && 'x' || ' '}})</span>
-						<span class="title">{{option.name}}</span>
-					</span>
-				</p>
-			</section>
+					<section id="greatAt">
+						<h3>I'm also really good at:</h3>
+						<p>
+							<span class="option" ng-repeat="option in greatAt">
+								<span class="checkmark">({{option.checkmark && 'x' || ' '}})</span>
+								<span class="title">{{option.name}}</span>
+							</span>
+						</p>
+					</section>
+				</div>
 
-			<section id="description">
-				<h3>I would describe my work as:</h3>
-				<p>
-					<span class="option" ng-repeat="option in description">
-						<span class="checkmark">({{option.checkmark && 'x' || ' '}})</span>
-						<span class="title">{{option.name}}</span>
-					</span>	
-				</p>
-				
-			</section>
+				<div class="col-lg-12 col-md-4 col-xs-12">
+					<section id="description">
+						<h3>I would describe my work as:</h3>
+						<p>
+							<span class="option" ng-repeat="option in description">
+								<span class="checkmark">({{option.checkmark && 'x' || ' '}})</span>
+								<span class="title">{{option.name}}</span>
+							</span>	
+						</p>
+						
+					</section>
 
-			<section  id="website" ng-if="person.website">
-				<h3>You can view my work at:</h3>
-				<p><a href="http://{{person.website}}/">{{person.website}}</a></p>
-			</section>
+					<section  id="website" ng-if="person.website">
+						<h3>You can view my work at:</h3>
+						<p><a class="cta" href="http://{{person.website}}/">{{person.website}}</a></p>
+					</section>
 
-			<section  id="email" ng-if="person.email">
-				<h3>You can contact me on:</h3>
-				<p>{{person.email}}</p>
-			</section>
+					<section  id="email" ng-if="person.email">
+						<h3>You can contact me on:</h3>
+						<p>{{person.email}}</p>
+					</section>
+				</div>
+			</div>
 		</div>
 
 	</div>
