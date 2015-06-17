@@ -1,11 +1,11 @@
-angular.module('keepsake', [
+var app = angular.module('keepsake', [
 	'ngRoute',
 	'ngAnimate',
 	'keepsake.index',
 	'keepsake.card',
-]).
+]);
 
-config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: 'index/index.html',
 		controller: 'IndexController'

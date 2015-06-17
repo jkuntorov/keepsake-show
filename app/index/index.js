@@ -33,7 +33,7 @@ angular.module('keepsake.index', ['ngRoute'])
 
 	$scope.specialities = [];
 
-	$scope.clearFilters = function() {
+	$scope.clearFilters = function() {	
 		$scope.search = {};
 	};
 
