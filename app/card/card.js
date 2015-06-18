@@ -7,7 +7,7 @@ angular.module('keepsake.card', ['ngRoute'])
   });
 }])
 
-.controller('CardController', function($scope, $http, $routeParams) {
+.controller('CardController', function($scope, $http, $routeParams, $sce) {
 	$scope.words = {
 		greatAt: {
 			gd_branding: 'Branding',
@@ -67,5 +67,16 @@ angular.module('keepsake.card', ['ngRoute'])
 			$scope.description.push({ name: $scope.words.description.i_rules, checkmark: $scope.person.descriptionBreakRules });
 			$scope.description.push({ name: $scope.words.description.i_simple, checkmark: $scope.person.descriptionSimple });
 		}
+
+		$scope.vimeoEmbedURL = $sce.trustAsResourceUrl("//player.vimeo.com/video/" + $scope.person.vimeo_id);
+
+		$scope.showImage = function() {
+			return ($scope.person.vimeo_id == null);
+		}
+
+		$scope.showVideo = function() {
+			return ($scope.person.vimeo_id != null);
+		}
+
 	});
 });

@@ -103,7 +103,8 @@ a.cta:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-.card img {
+.card img,
+.card .embed-responsive {
   margin-bottom: 20px;
   margin-left: auto;
 }
