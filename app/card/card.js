@@ -77,6 +77,10 @@ angular.module('keepsake.card', ['ngRoute'])
 		$scope.showVideo = function() {
 			return ($scope.person.vimeo_id != null);
 		}
-
 	});
+
+	var init = function() {
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+	}
+	init();
 });
