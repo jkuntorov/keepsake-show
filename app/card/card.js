@@ -28,7 +28,7 @@ angular.module('keepsake.card', ['ngRoute'])
 			gd_less: 'Less is more',
 			i_words: 'A picture is worth a thousand words',
 			i_comm: 'Good illustration communicates',
-			i_imagination: 'Imagination is the beginning of creation',
+			i_imagination: 'Imagination — beginning of creation',
 			i_style: 'Style is not to be trusted',
 			i_rules: 'Break the rules',
 			i_simple: 'Keep it simple'
