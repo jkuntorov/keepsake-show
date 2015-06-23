@@ -11,7 +11,7 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone the repository
 
-Clone the keepsake-show repository using Git:
+Clone the keepsake-show repository using _git_:
 
 ```
 git clone https://github.com/jkuntorov/keepsake-show.git
@@ -145,36 +145,15 @@ bower update
 
 This will find the latest versions that match the version ranges specified in the `bower.json` file.
 
-
-## Loading Angular Asynchronously
-
-The keepsake-show project supports loading the framework and application scripts asynchronously.  The
-special `index-async.html` is designed to support this style of loading.  For it to work you must
-inject a piece of Angular JavaScript into the HTML page.  The project has a predefined script to help
-do this.
-
-```
-npm run update-index-async
-```
-
-This will copy the contents of the `angular-loader.js` library file into the `index-async.html` page.
-You can run this every time you update the version of Angular that you are using.
-
-
 ## Serving the Application Files
 
 While angular is client-side-only technology and it's possible to create angular webapps that
 don't require a backend server at all, we recommend serving the project files using a local
-webserver during development to avoid issues with security restrictions (sandbox) in browsers. The
-sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
-etc to function properly when an html page is opened via `file://` scheme instead of `http://`.
-
+webserver during development to avoid issues with security restrictions (sandbox) in browsers. The sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr, etc to function properly when an html page is opened via `file://` scheme instead of `http://`.
 
 ### Running the App during Development
 
-The keepsake-show project comes preconfigured with a local development webserver.  It is a node.js
-tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
-install the tool globally:
+The keepsake-show project comes preconfigured with a local development webserver.  It is a node.js tool called _http-server_.  You can start this webserver with `npm start` but you may choose to install the tool globally:
 
 ```
 sudo npm install -g http-server
