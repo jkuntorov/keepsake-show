@@ -38,7 +38,6 @@ angular.module('keepsake.index', ['ngRoute'])
 	};
 
 	$scope.$watch('search.course', function(newValue, oldValue) {
-		console.log($scope.search);
 		$rootScope.search = $scope.search;
 		if ($scope.search) {
 			if ($scope.search.course == 'gd') { $scope.specialities = $scope.gd_specialities; };
