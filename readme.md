@@ -1,6 +1,6 @@
 # Keepsake Show Website
 
-This is a website built with [AngularJS](http://angularjs.org/) to present the exhibits featured in the Keepsake Degree Show for FdA Graphic Design & FdA Illustration students in Camberwell College of Arts, year 2015.
+This is a website built with [AngularJS](http://angularjs.org/) to present the exhibits featured in the Keepsake Degree Show for FdA Graphic Design & FdA Illustration students in Camberwell College of Arts, year 2015. You can visit the website [here](http://keepsakeshow.co.uk/).
 
 ## Getting Started
 You need git to clone the keepsake-show repository. You can get git from
